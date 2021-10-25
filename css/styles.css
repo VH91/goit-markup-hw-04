@@ -35,7 +35,6 @@ button {
 .img {
   display: block;
   height: auto;
-  max-width: none;
 }
 
 .page {
@@ -88,10 +87,13 @@ button {
   padding: 0;
 }
 
-.menu-item:not(:last-child) {
-  margin-right: 50px;
+.menu-list {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .link-style {
@@ -160,8 +162,6 @@ button {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .contact .contact-link:hover,
@@ -283,7 +283,7 @@ button {
 }
 
 .about-item:not(:last-child) {
-  margin-right: 30px;
+  margin-left: 30px;
   display: block;
   width: 100%;
   height: auto;
@@ -305,6 +305,10 @@ button {
   padding-top: 94px;
   padding-bottom: 94px;
   text-align: center;
+}
+
+.team-img {
+  margin-right: 30px;
 }
 
 .team .title {
@@ -389,7 +393,7 @@ button {
 
 .portfolio {
   padding-top: 94px;
-  padding-bottom: 50px;
+  padding-bottom: 94px;
 }
 
 .portfolio .filtr {
