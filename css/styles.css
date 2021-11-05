@@ -171,7 +171,6 @@ button {
 
 .contact-icon {
   fill: var(--title-text-color);
-  display: block;
 }
 
 .contact-link:hover .contact-icon,
