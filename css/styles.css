@@ -169,6 +169,16 @@ button {
   color: var(--accent-color);
 }
 
+.contact-icon {
+  fill: var(--title-text-color);
+  display: block;
+}
+
+.contact-link:hover .contact-icon,
+.contact-link:focus .contact-icon {
+  fill: var(--accent-color);
+}
+
 /* Герой */
 
 .visually-hidden {
@@ -188,6 +198,7 @@ button {
   background: #2f303a;
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-title {
@@ -233,6 +244,24 @@ button {
   background: #188ce8;
 }
 
+/* Фон герой */
+
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-bg.jpg);
+
+  background-repeat: no-repeat;
+  block-size: cover;
+}
+
 /* Особености */
 
 .features {
@@ -270,6 +299,18 @@ button {
   line-height: 1.71;
   letter-spacing: 0.03em;
   width: 270px;
+}
+
+/* Особенности Иконки */
+
+.features-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 /* Наши работы */
@@ -345,13 +386,102 @@ button {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 }
 
 .team-card {
   padding-top: 30px;
   padding-bottom: 30px;
   background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+.card-thumb {
+  display: block;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item + .social-item {
+  margin-left: 10px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-icon {
+  fill: #afb1b8;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--white-color);
+}
+
+/* Постоянные клиенты */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.clients-list {
+  display: flex;
+  margin-left: -30px;
+}
+.clients-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: calc(100% / 6 - 30px);
+  margin-left: 30px;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-icon {
+  fill: #afb1b8;
+}
+.clients-link .clients-icon:hover,
+.clients-link .clients-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* Подвал Студио-портфолио*/
@@ -389,21 +519,65 @@ button {
   color: var(--accent-color);
 }
 
+/* Футер Иконки */
+
+.footer-social {
+  margin-left: 70px;
+}
+.footer-social-title {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.footer-social-list {
+  display: flex;
+}
+.footer-item {
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-icon {
+  color: var(--white-color);
+}
+
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+
 /* Филтр-Кнопки */
 
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .portfolio .filtr {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 34px;
   text-align: center;
   justify-content: center;
 }
 
-.portfolio .filtr .item {
+.portfolio .filtr .item + .item {
   margin-left: 8px;
 }
 
@@ -411,6 +585,7 @@ button {
   border-radius: 4px;
   border: 1px solid transparent;
   padding: 6px 22px;
+
   background: #f5f4fa;
   font-weight: 500;
   font-size: 16px;
@@ -418,19 +593,15 @@ button {
   letter-spacing: 0.03em;
   cursor: pointer;
 }
-
 .portfolio .filtr .filtr-button:hover,
-.portfolio .filtr .filtr-button:focus,
-.portfolio .filtr .active-button {
+.portfolio .filtr .filtr-button:focus {
   background: var(--accent-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Проекты */
-
-.portfolio .title {
-  visibility: hidden;
-}
+/* Наши Проекты */
 
 .portfolio-list .portfolio-title {
   font-weight: 700;
@@ -438,38 +609,43 @@ button {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
-
 .portfolio-list .item {
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc(100% / 3 - 30px);
 }
 
+.portfolio-link {
+  display: block;
+  color: var(--primery-text-color);
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-list .portfolio-text {
   color: var(--title-text-color);
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
-
 .portfolio-title {
   margin-bottom: 4px;
 }
-
 .portfolio-card {
   padding: 20px 24px 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
-}
-
-.first-child {
-  margin-left: 0;
 }
